@@ -1,0 +1,6 @@
+@lengocsiliem_2122110324_HostAddress = http://localhost:5175
+
+GET {{lengocsiliem_2122110324_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\lengocsiliem_2122110324.props" />
+</Project>
