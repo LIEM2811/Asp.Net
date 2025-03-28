@@ -6,6 +6,6 @@
         public string name { get; set; }
         public string avatar { get; set; }
         public Double price { get; set; }
-
+        
     }
 }
