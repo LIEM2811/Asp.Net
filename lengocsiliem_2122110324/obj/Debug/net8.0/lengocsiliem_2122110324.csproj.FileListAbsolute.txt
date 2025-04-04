@@ -176,3 +176,4 @@ D:\Asp.Net\lengocsiliem_2122110324\lengocsiliem_2122110324\bin\Debug\net8.0\Micr
 D:\Asp.Net\lengocsiliem_2122110324\lengocsiliem_2122110324\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\Asp.Net\lengocsiliem_2122110324\lengocsiliem_2122110324\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Asp.Net\lengocsiliem_2122110324\lengocsiliem_2122110324\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Asp.Net\lengocsiliem_2122110324\lengocsiliem_2122110324\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

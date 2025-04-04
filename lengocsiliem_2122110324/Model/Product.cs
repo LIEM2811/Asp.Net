@@ -1,11 +1,19 @@
-﻿namespace lengocsiliem_2122110324.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace lengocsiliem_2122110324.Model
 {
     public class Product
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string avatar { get; set; }
-        public Double price { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public Double Price { get; set; }
+        public string Description { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         
     }
 }
