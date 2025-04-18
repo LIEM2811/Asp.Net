@@ -1,12 +1,10 @@
 ﻿using lengocsiliem_2122110324.Data;
-using lengocsiliem_2122110324.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace lengocsiliem_2122110324.Controllers
 {
@@ -20,6 +18,7 @@ namespace lengocsiliem_2122110324.Controllers
         {
             _context = context;
         }
+
         // GET: api/<CategoryController>
         [HttpGet]
         public async Task<IEnumerable<Category>> Get()
@@ -27,14 +26,28 @@ namespace lengocsiliem_2122110324.Controllers
             return await _context.Categories.ToListAsync();
         }
 
+        // Get: api/<CategoryController>/id
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (category == null)
+            {
+                return NotFound(new { message = "Category not found" });
+            }
+            return Ok(category);
+        }
+
         // POST api/<CategoryController>
         [HttpPost]
-        public IActionResult Post([FromBody] CategoryDTO dto)
+        [Authorize(Policy = "AdminPolicy")] // Chỉ admin mới được tạo
+        public IActionResult Post([FromBody] Category cat)
         {
             var category = new Category
             {
-                Name = dto.Name,
-                Image = dto.Image,
+                Name = cat.Name,
+                Image = cat.Image,
                 CreatedAt = DateTime.Now,
             };
 
@@ -44,9 +57,10 @@ namespace lengocsiliem_2122110324.Controllers
             return Ok(new { message = "Category created", category });
         }
 
-
+        // PUT: api/<CategoryController>/id
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] CategoryDTO dto)
+        [Authorize(Policy = "AdminPolicy")] // Chỉ admin mới được sửa
+        public IActionResult Put(int id, [FromBody] Category cat)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
 
@@ -55,9 +69,9 @@ namespace lengocsiliem_2122110324.Controllers
                 return NotFound(new { message = "Category not found" });
             }
 
-            category.Name = dto.Name;
-            category.Image = dto.Image;
-            category.UpdatedAt = DateTime.Now; 
+            category.Name = cat.Name;
+            category.Image = cat.Image;
+            category.UpdatedAt = DateTime.Now;
 
             _context.Categories.Update(category);
             _context.SaveChanges();
@@ -65,9 +79,9 @@ namespace lengocsiliem_2122110324.Controllers
             return Ok(new { message = "Category updated", category });
         }
 
-
-        // DELETE api/<CategoryController>/5
+        // DELETE: api/<CategoryController>/id
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminPolicy")] // Chỉ admin mới được xóa
         public IActionResult Delete(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
@@ -79,8 +93,7 @@ namespace lengocsiliem_2122110324.Controllers
             _context.Categories.Remove(category);
             _context.SaveChanges();
 
-            return Ok(new { message = "Category deleted", category });
+            return Ok(new { message = "Xóa Category thành công" });
         }
-
     }
 }

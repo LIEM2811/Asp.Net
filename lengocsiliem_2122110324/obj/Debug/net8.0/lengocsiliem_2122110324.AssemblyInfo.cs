@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lengocsiliem_2122110324")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6ea5b318bd0887dcd3ec485e05475ec4b7cab18")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f9c95ebb069ed4e3ba3f822394d8efed5ad914e")]
 [assembly: System.Reflection.AssemblyProductAttribute("lengocsiliem_2122110324")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lengocsiliem_2122110324")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

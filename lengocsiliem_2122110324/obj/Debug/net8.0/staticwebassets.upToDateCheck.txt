@@ -1,0 +1,3 @@
+wwwroot\images\iphone-16-pro-max.webp
+wwwroot\images\product01.png
+wwwroot\images\product02.jpg

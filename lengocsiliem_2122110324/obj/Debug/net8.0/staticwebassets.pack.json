@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
+      "PackagePath": "staticwebassets\\images\\iphone-16-pro-max.webp"
+    },
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product01.png",
+      "PackagePath": "staticwebassets\\images\\product01.png"
+    },
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product02.jpg",
+      "PackagePath": "staticwebassets\\images\\product02.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.lengocsiliem_2122110324.props",
+      "PackagePath": "build\\lengocsiliem_2122110324.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.lengocsiliem_2122110324.props",
+      "PackagePath": "buildMultiTargeting\\lengocsiliem_2122110324.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.lengocsiliem_2122110324.props",
+      "PackagePath": "buildTransitive\\lengocsiliem_2122110324.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.lengocsiliem_2122110324.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.lengocsiliem_2122110324.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

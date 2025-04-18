@@ -1,5 +1,252 @@
 {
   "Version": 1,
   "ManifestType": "Build",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "images/iphone-16-pro-max.diljip9wl3.webp",
+      "AssetFile": "images/iphone-16-pro-max.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "diljip9wl3"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI="
+        },
+        {
+          "Name": "label",
+          "Value": "images/iphone-16-pro-max.webp"
+        }
+      ]
+    },
+    {
+      "Route": "images/iphone-16-pro-max.webp",
+      "AssetFile": "images/iphone-16-pro-max.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI="
+        }
+      ]
+    },
+    {
+      "Route": "images/product01.cvhq1xmqjn.png",
+      "AssetFile": "images/product01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:40:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cvhq1xmqjn"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8="
+        },
+        {
+          "Name": "label",
+          "Value": "images/product01.png"
+        }
+      ]
+    },
+    {
+      "Route": "images/product01.png",
+      "AssetFile": "images/product01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:40:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8="
+        }
+      ]
+    },
+    {
+      "Route": "images/product02.hcdze8kozm.jpg",
+      "AssetFile": "images/product02.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcdze8kozm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU="
+        },
+        {
+          "Name": "label",
+          "Value": "images/product02.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/product02.jpg",
+      "AssetFile": "images/product02.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU="
+        }
+      ]
+    }
+  ]
 }

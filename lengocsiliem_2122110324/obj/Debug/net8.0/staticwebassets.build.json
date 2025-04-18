@@ -1,12 +1,331 @@
 {
   "Version": 1,
-  "Hash": "7N9U/f7Kp+OE5T3tME6hC6RGeZOmd4bvnosG1FHELrM=",
+  "Hash": "UfqA1ZI3NXFItAnORZvngrXXRY3yqQeIImYXogn6nQc=",
   "Source": "lengocsiliem_2122110324",
   "BasePath": "_content/lengocsiliem_2122110324",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "lengocsiliem_2122110324\\wwwroot",
+      "Source": "lengocsiliem_2122110324",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/iphone-16-pro-max#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "diljip9wl3",
+      "Integrity": "pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\iphone-16-pro-max.webp"
+    },
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product01.png",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/product01#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cvhq1xmqjn",
+      "Integrity": "+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product01.png"
+    },
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product02.jpg",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/product02#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hcdze8kozm",
+      "Integrity": "r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product02.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/iphone-16-pro-max.diljip9wl3.webp",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "diljip9wl3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/iphone-16-pro-max.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI="
+        }
+      ]
+    },
+    {
+      "Route": "images/iphone-16-pro-max.webp",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI="
+        }
+      ]
+    },
+    {
+      "Route": "images/product01.cvhq1xmqjn.png",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:40:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cvhq1xmqjn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product01.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8="
+        }
+      ]
+    },
+    {
+      "Route": "images/product01.png",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:40:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+IEI8NoL1ABBUCDUQ77M/Cr116MWv4DBxszTm8WedB8="
+        }
+      ]
+    },
+    {
+      "Route": "images/product02.hcdze8kozm.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product02.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcdze8kozm"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product02.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU="
+        }
+      ]
+    },
+    {
+      "Route": "images/product02.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product02.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 01:55:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r6P8xRV1JIeCMu+fJITRfIsNRyGXL9GgQBePivsbdgU="
+        }
+      ]
+    }
+  ]
 }
