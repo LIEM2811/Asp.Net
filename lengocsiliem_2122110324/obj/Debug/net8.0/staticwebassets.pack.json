@@ -1,8 +1,28 @@
 {
   "Files": [
     {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\15.jpg",
+      "PackagePath": "staticwebassets\\images\\15.jpg"
+    },
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\24.jpg",
+      "PackagePath": "staticwebassets\\images\\24.jpg"
+    },
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\600_iphone_se_2020_trang_taozin_1.jpg",
+      "PackagePath": "staticwebassets\\images\\600_iphone_se_2020_trang_taozin_1.jpg"
+    },
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\9.jpg"
+    },
+    {
       "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
       "PackagePath": "staticwebassets\\images\\iphone-16-pro-max.webp"
+    },
+    {
+      "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\maytinh2.jpg",
+      "PackagePath": "staticwebassets\\images\\maytinh2.jpg"
     },
     {
       "Id": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product01.png",

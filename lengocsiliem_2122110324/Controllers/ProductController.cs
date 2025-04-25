@@ -33,6 +33,9 @@ namespace lengocsiliem_2122110324.Controllers
                     CategoryName = p.Category.Name, // lấy categoryName
                     p.Name,
                     p.Image,
+                    p.Discount,
+                    p.SpecialPrice,
+                    p.Quantity,
                     p.Price,
                     p.Description,
                     p.CreatedAt,
@@ -44,14 +47,65 @@ namespace lengocsiliem_2122110324.Controllers
 
         // GET api/<ProductController>/5
         [HttpGet("{id}")]
-        public async Task<string> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Products
+                .Include(p => p.Category) // Include category
+                .Where(p => p.Id == id)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.CategoryId,
+                    CategoryName = p.Category.Name, // Include category name
+                    p.Name,
+                    p.Image,
+                    p.Discount,
+                    p.SpecialPrice,
+                    p.Quantity,
+                    p.Price,
+                    p.Description,
+                    p.CreatedAt,
+                    p.UpdatedAt
+                })
+                .FirstOrDefaultAsync();
+
             if (product == null)
             {
-                return "Product not found";
+                return NotFound("Product not found");
             }
-            return product.Name;
+
+            return Ok(product);
+        }
+        // GET api/Product/category/3
+        [HttpGet("category/{categoryId}")]
+        public async Task<IActionResult> GetByCategory(int categoryId)
+        {
+            var products = await _context.Products
+                .Include(p => p.Category)
+                .Where(p => p.CategoryId == categoryId)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.CategoryId,
+                    CategoryName = p.Category.Name,
+                    p.Name,
+                    p.Image,
+                    p.Price,
+                    p.Discount,
+                    p.SpecialPrice,
+                    p.Quantity,
+                    p.Description,
+                    p.CreatedAt,
+                    p.UpdatedAt
+                })
+                .ToListAsync();
+
+            if (products == null || !products.Any())
+            {
+                return NotFound("No products found for this category.");
+            }
+
+            return Ok(products);
         }
 
         // POST api/<ProductController>
@@ -70,6 +124,9 @@ namespace lengocsiliem_2122110324.Controllers
                 Name = pro.Name,
                 Image = pro.Image,
                 Price = pro.Price,
+                Discount = pro.Discount,
+                SpecialPrice = pro.SpecialPrice,
+                Quantity = pro.Quantity,
                 CategoryId = pro.CategoryId,
                 Description = pro.Description,
                 CreatedAt = DateTime.Now,
@@ -95,6 +152,9 @@ namespace lengocsiliem_2122110324.Controllers
             product.Name = pro.Name;
             product.Image = pro.Image;
             product.Price = pro.Price;
+            product.Discount = pro.Discount;
+            product.SpecialPrice = pro.SpecialPrice;
+            product.Quantity = pro.Quantity;
             product.CategoryId = pro.CategoryId;
             product.Description = pro.Description;
             product.UpdatedAt = DateTime.Now;
@@ -155,8 +215,8 @@ namespace lengocsiliem_2122110324.Controllers
             // Return DTO
             var productDto = new ProductDTO
             {
-                Id = product.Id,
-                Name = product.Name,
+                ProductId = product.Id,
+                ProductName = product.Name,
                 Image = product.Image
             };
 

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using lengocsiliem_2122110324.Model;
 
 namespace lengocsiliem_2122110324.Controllers
 {
@@ -21,18 +22,88 @@ namespace lengocsiliem_2122110324.Controllers
 
         // GET: api/Order
         [HttpGet]
-        public async Task<IEnumerable<Order>> Get()
+        public async Task<IActionResult> Get()
         {
-            return await _context.Orders
+            var orders = await _context.Orders
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                        .ThenInclude(p => p.Category)
+                .Select(o => new
+                {
+                    orderId = o.OrderId,
+                    email = o.Email,
+                    orderDate = o.OrderDate,
+                    payment = o.Payment,
+                    note = o.Note,
+                    totalAmount = o.TotalAmount,
+                    orderStatus = o.OrderStatus,
+                    orderItems = o.OrderItems.Select(oi => new
+                    {
+                        orderItemId = oi.OrderDetailId,
+                        product = oi.Product != null ? new
+                        {
+                            productId = oi.Product.Id,
+                            productName = oi.Product.Name ?? "Unknown",
+                            image = oi.Product.Image ?? "No Image",
+                            description = oi.Product.Description ?? "No Description",
+                            quantity = oi.Quantity,
+                            price = oi.Product.Price,
+                            discount = oi.Product.Discount,
+                            specialPrice = oi.Product.SpecialPrice,
+                            category = oi.Product.Category != null ? new
+                            {
+                                categoryId = oi.Product.Category.Id,
+                                categoryName = oi.Product.Category.Name
+                            } : null
+                        } : null
+                    }).ToList()
+                })
                 .ToListAsync();
+
+            return Ok(orders);
         }
 
-        // GET: api/Order/5
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+
+        // GET: api/Order/user/john@example.com/5
+        [HttpGet("user/{email}/{orderId}")]
+        public async Task<IActionResult> GetUserOrder(string email, int orderId)
         {
             var order = await _context.Orders
-                .FirstOrDefaultAsync(o => o.OrderId == id);
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                        .ThenInclude(p => p.Category)
+                .Where(o => o.Email == email && o.OrderId == orderId)
+                .Select(o => new
+                {
+                    orderId = o.OrderId,
+                    email = o.Email,
+                    orderDate = o.OrderDate,
+                    payment = o.Payment,
+                    note = o.Note,
+                    totalAmount = o.TotalAmount,
+                    orderStatus = o.OrderStatus,
+                    orderItems = o.OrderItems.Select(oi => new
+                    {
+                        orderItemId = oi.OrderDetailId,
+                        product = oi.Product != null ? new
+                        {
+                            productId = oi.Product.Id,
+                            productName = oi.Product.Name ?? "Unknown",
+                            image = oi.Product.Image ?? "No Image",
+                            description = oi.Product.Description ?? "No Description",
+                            quantity = oi.Quantity,
+                            price = oi.Product.Price,
+                            discount = oi.Product.Discount,
+                            specialPrice = oi.Product.SpecialPrice,
+                            category = oi.Product.Category != null ? new
+                            {
+                                categoryId = oi.Product.Category.Id,
+                                categoryName = oi.Product.Category.Name
+                            } : null
+                        } : null
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
 
             if (order == null)
             {
@@ -42,64 +113,142 @@ namespace lengocsiliem_2122110324.Controllers
             return Ok(order);
         }
 
-        // POST: api/Order
-        [HttpPost]
-        [Authorize(Policy = "AdminPolicy")]
-        public IActionResult Post([FromBody] Order order)
+
+        [HttpPost("user/{email}/carts/{cartId}/payment/{payment}/note/{note}")]
+        public async Task<IActionResult> CreateOrderFromCart(string email, int cartId, string payment, string note)
         {
-            order.OrderDate = DateTime.Now;
-            order.CreatedAt = DateTime.Now;
+            var cart = await _context.Carts
+                .Include(c => c.Items)
+                    .ThenInclude(ci => ci.Product)
+                .FirstOrDefaultAsync(c => c.Id == cartId && c.User != null && c.User.Email == email);
+
+            if (cart == null || cart.Items == null || !cart.Items.Any())
+            {
+                return BadRequest(new { message = "Cart is empty or not found." });
+            }
+
+            if (string.IsNullOrWhiteSpace(payment))
+            {
+                return BadRequest(new { message = "Payment method is required." });
+            }
+
+            if (note.Length > 500)
+            {
+                return BadRequest(new { message = "Note cannot exceed 500 characters." });
+            }
+
+            var order = new Order
+            {
+                Email = email,
+                OrderDate = DateTime.UtcNow,
+                Payment = payment,
+                OrderStatus = "Pending",
+                Note = note,
+                CreatedAt = DateTime.UtcNow,
+                OrderItems = new List<OrderDetail>()
+            };
+
+            decimal totalAmount = 0;
+
+            foreach (var item in cart.Items)
+            {
+                var product = item.Product;
+                if (product == null) continue;
+
+                decimal price = product.SpecialPrice > 0 ? product.SpecialPrice : (decimal)product.Price;
+                decimal discount = item.Discount ?? 0m;
+
+                if (discount < 0 || discount > 100)
+                {
+                    return BadRequest(new { message = $"Invalid discount value for product {product.Name}." });
+                }
+
+                decimal orderedPrice = price * item.Quantity * (1 - discount / 100m);
+                totalAmount += orderedPrice;
+
+                order.OrderItems.Add(new OrderDetail
+                {
+                    ProductId = product.Id,
+                    Quantity = item.Quantity,
+                    OrderedProductPrice = price,
+                    Discount = discount
+                });
+            }
+
+            order.TotalAmount = totalAmount;
 
             _context.Orders.Add(order);
-            _context.SaveChanges();
 
-            return Ok(new { message = "Order created", order });
+            // ❌ Xóa cart items
+            _context.CartItems.RemoveRange(cart.Items);
+
+            // ✅ Reset total price của cart
+            cart.TotalPrice = 0;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                message = "Order created successfully",
+                orderId = order.OrderId,
+                total = totalAmount,
+                payment = order.Payment,
+                note = order.Note
+            });
         }
-
 
         // PUT: api/Order/5
         [HttpPut("{id}")]
-        [Authorize(Policy = "AdminPolicy")]
-        public IActionResult Put(int id, [FromBody] Order updatedOrder)
+        public async Task<IActionResult> Put(int id, [FromBody] Order updatedOrder)
         {
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
+            if (id != updatedOrder.OrderId)
+            {
+                return BadRequest(new { message = "Order ID mismatch." });
+            }
+
+            var existingOrder = await _context.Orders
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.OrderId == id);
+
+            if (existingOrder == null)
+            {
+                return NotFound(new { message = "Order not found." });
+            }
+
+            // Cập nhật thông tin cơ bản
+            existingOrder.Payment = updatedOrder.Payment;
+            existingOrder.Note = updatedOrder.Note;
+            existingOrder.OrderStatus = updatedOrder.OrderStatus;
+
+            _context.Orders.Update(existingOrder);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Order updated successfully.", order = existingOrder });
+        }
+        // DELETE: api/Order/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var order = await _context.Orders
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.OrderId == id);
 
             if (order == null)
             {
                 return NotFound(new { message = "Order not found" });
             }
 
-            // Cập nhật thông tin
-            order.UserId = updatedOrder.UserId;
-            order.TotalAmount = updatedOrder.TotalAmount;
-            order.Status = updatedOrder.Status;
-            order.ShippingAddress = updatedOrder.ShippingAddress;
-            order.Payment = updatedOrder.Payment;
-            order.Note = updatedOrder.Note;
-            order.UpdatedAt = DateTime.Now;
-
-            _context.Orders.Update(order);
-            _context.SaveChanges();
-
-            return Ok(new { message = "Order updated", order });
-        }
-
-        // DELETE: api/Order/5
-        [HttpDelete("{id}")]
-        [Authorize(Policy = "AdminPolicy")]
-        public IActionResult Delete(int id)
-        {
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
-
-            if (order == null)
+            // Xóa các OrderItems liên quan trước
+            if (order.OrderItems != null && order.OrderItems.Any())
             {
-                return NotFound(new { message = "Order not found" });
+                _context.OrderDetails.RemoveRange(order.OrderItems);
             }
 
             _context.Orders.Remove(order);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Order deleted", order });
+            return Ok(new { message = "Order and its items deleted successfully", orderId = id });
         }
+
     }
 }

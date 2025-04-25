@@ -58,6 +58,15 @@ public class AuthController : ControllerBase
         }).ToList();
 
         _context.Users.Add(user);
+        _context.SaveChanges(); // Lưu trước để lấy được UserId
+
+        // ✅ Tạo giỏ hàng cho user sau khi lưu thành công
+        var cart = new Cart
+        {
+            UserId = user.UserId,
+};
+
+        _context.Carts.Add(cart);
         _context.SaveChanges();
 
         var token = GenerateJwtToken(user.Email);
@@ -68,6 +77,7 @@ public class AuthController : ControllerBase
             token = token
         });
     }
+
 
 
 
@@ -99,6 +109,7 @@ public class AuthController : ControllerBase
 
         return Ok(new
         {
+            
             message = "Login successful",
             token = token
         });

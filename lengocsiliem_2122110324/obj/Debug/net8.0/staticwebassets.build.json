@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UfqA1ZI3NXFItAnORZvngrXXRY3yqQeIImYXogn6nQc=",
+  "Hash": "e+aJq4/Qrd0yA5bceNjoePUvSUhPKr8wDjgiKepMd/Y=",
   "Source": "lengocsiliem_2122110324",
   "BasePath": "_content/lengocsiliem_2122110324",
   "Mode": "Default",
@@ -16,6 +16,90 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\15.jpg",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/15#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gng93jjruu",
+      "Integrity": "dEStrQQ86X+fs4340kgDMepkv3NjX/DXspeQv6T8jwI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\15.jpg"
+    },
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\24.jpg",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/24#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e1sgh67dfs",
+      "Integrity": "8iqxdnNsGWQpbWKsYjwbumPuA/156Tb3Vb3iDe7xInU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\24.jpg"
+    },
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\600_iphone_se_2020_trang_taozin_1.jpg",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/600_iphone_se_2020_trang_taozin_1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nfe6112scn",
+      "Integrity": "k/ONCo4abO4e/VrRWQofevMRXrpqE87wrkH4YDeBRu8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\600_iphone_se_2020_trang_taozin_1.jpg"
+    },
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\9.jpg",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/9#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "luu1e3mcb8",
+      "Integrity": "bWyJab1VqpBsCqo+P0cHNo3zPydnqPo8/X+HmSqpxfA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9.jpg"
+    },
     {
       "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
       "SourceId": "lengocsiliem_2122110324",
@@ -36,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\iphone-16-pro-max.webp"
+    },
+    {
+      "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\maytinh2.jpg",
+      "SourceId": "lengocsiliem_2122110324",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\",
+      "BasePath": "_content/lengocsiliem_2122110324",
+      "RelativePath": "images/maytinh2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0g3r2szohi",
+      "Integrity": "0FMhKY3uFt/1bwmrV2h+ueGr9uqnNGJYbF7x8T0L3Os=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\maytinh2.jpg"
     },
     {
       "Identity": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\product01.png",
@@ -82,6 +187,334 @@
   ],
   "Endpoints": [
     {
+      "Route": "images/15.gng93jjruu.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\15.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3593"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dEStrQQ86X+fs4340kgDMepkv3NjX/DXspeQv6T8jwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gng93jjruu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/15.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dEStrQQ86X+fs4340kgDMepkv3NjX/DXspeQv6T8jwI="
+        }
+      ]
+    },
+    {
+      "Route": "images/15.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\15.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3593"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dEStrQQ86X+fs4340kgDMepkv3NjX/DXspeQv6T8jwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dEStrQQ86X+fs4340kgDMepkv3NjX/DXspeQv6T8jwI="
+        }
+      ]
+    },
+    {
+      "Route": "images/24.e1sgh67dfs.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\24.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8iqxdnNsGWQpbWKsYjwbumPuA/156Tb3Vb3iDe7xInU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:53:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e1sgh67dfs"
+        },
+        {
+          "Name": "label",
+          "Value": "images/24.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iqxdnNsGWQpbWKsYjwbumPuA/156Tb3Vb3iDe7xInU="
+        }
+      ]
+    },
+    {
+      "Route": "images/24.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\24.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8iqxdnNsGWQpbWKsYjwbumPuA/156Tb3Vb3iDe7xInU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:53:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iqxdnNsGWQpbWKsYjwbumPuA/156Tb3Vb3iDe7xInU="
+        }
+      ]
+    },
+    {
+      "Route": "images/600_iphone_se_2020_trang_taozin_1.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\600_iphone_se_2020_trang_taozin_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k/ONCo4abO4e/VrRWQofevMRXrpqE87wrkH4YDeBRu8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:52:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-k/ONCo4abO4e/VrRWQofevMRXrpqE87wrkH4YDeBRu8="
+        }
+      ]
+    },
+    {
+      "Route": "images/600_iphone_se_2020_trang_taozin_1.nfe6112scn.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\600_iphone_se_2020_trang_taozin_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k/ONCo4abO4e/VrRWQofevMRXrpqE87wrkH4YDeBRu8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:52:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nfe6112scn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/600_iphone_se_2020_trang_taozin_1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-k/ONCo4abO4e/VrRWQofevMRXrpqE87wrkH4YDeBRu8="
+        }
+      ]
+    },
+    {
+      "Route": "images/9.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bWyJab1VqpBsCqo+P0cHNo3zPydnqPo8/X+HmSqpxfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bWyJab1VqpBsCqo+P0cHNo3zPydnqPo8/X+HmSqpxfA="
+        }
+      ]
+    },
+    {
+      "Route": "images/9.luu1e3mcb8.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bWyJab1VqpBsCqo+P0cHNo3zPydnqPo8/X+HmSqpxfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "luu1e3mcb8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bWyJab1VqpBsCqo+P0cHNo3zPydnqPo8/X+HmSqpxfA="
+        }
+      ]
+    },
+    {
       "Route": "images/iphone-16-pro-max.diljip9wl3.webp",
       "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\iphone-16-pro-max.webp",
       "Selectors": [],
@@ -104,7 +537,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 01:55:55 GMT"
+          "Value": "Thu, 24 Apr 2025 12:52:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -149,7 +582,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 01:55:55 GMT"
+          "Value": "Thu, 24 Apr 2025 12:52:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -160,6 +593,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-pdk1BVwDIPwfnSPs0IBV+AU64MfpzPuR27HQOwiS+kI="
+        }
+      ]
+    },
+    {
+      "Route": "images/maytinh2.0g3r2szohi.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\maytinh2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0FMhKY3uFt/1bwmrV2h+ueGr9uqnNGJYbF7x8T0L3Os=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:57:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0g3r2szohi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/maytinh2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0FMhKY3uFt/1bwmrV2h+ueGr9uqnNGJYbF7x8T0L3Os="
+        }
+      ]
+    },
+    {
+      "Route": "images/maytinh2.jpg",
+      "AssetFile": "D:\\Asp.Net\\lengocsiliem_2122110324\\lengocsiliem_2122110324\\wwwroot\\images\\maytinh2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0FMhKY3uFt/1bwmrV2h+ueGr9uqnNGJYbF7x8T0L3Os=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 12:57:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0FMhKY3uFt/1bwmrV2h+ueGr9uqnNGJYbF7x8T0L3Os="
         }
       ]
     },
@@ -186,7 +701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 01:40:30 GMT"
+          "Value": "Thu, 24 Apr 2025 12:52:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -231,7 +746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 01:40:30 GMT"
+          "Value": "Thu, 24 Apr 2025 12:52:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -268,7 +783,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 01:55:23 GMT"
+          "Value": "Thu, 24 Apr 2025 12:52:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -313,7 +828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 01:55:23 GMT"
+          "Value": "Thu, 24 Apr 2025 12:52:34 GMT"
         },
         {
           "Name": "Cache-Control",

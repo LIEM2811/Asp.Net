@@ -34,7 +34,6 @@ namespace lengocsiliem_2122110324.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -60,20 +59,21 @@ namespace lengocsiliem_2122110324.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Payment")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ShippingAddress")
+                    b.Property<string>("OrderStatus")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("Payment")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -83,12 +83,7 @@ namespace lengocsiliem_2122110324.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("OrderId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Orders");
                 });
@@ -107,14 +102,14 @@ namespace lengocsiliem_2122110324.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("OrderedProductPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
-
-                    b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("OrderDetailId");
 
@@ -123,6 +118,64 @@ namespace lengocsiliem_2122110324.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("OrderDetails");
+                });
+
+            modelBuilder.Entity("lengocsiliem_2122110324.Model.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("lengocsiliem_2122110324.Model.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("SpecialPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartItems");
                 });
 
             modelBuilder.Entity("lengocsiliem_2122110324.Model.Product", b =>
@@ -143,8 +196,10 @@ namespace lengocsiliem_2122110324.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -153,6 +208,12 @@ namespace lengocsiliem_2122110324.Migrations
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("SpecialPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -221,32 +282,49 @@ namespace lengocsiliem_2122110324.Migrations
                     b.ToTable("UserRoles");
                 });
 
-            modelBuilder.Entity("Order", b =>
-                {
-                    b.HasOne("lengocsiliem_2122110324.Model.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("OrderDetail", b =>
                 {
                     b.HasOne("Order", "Order")
-                        .WithMany("OrderDetails")
+                        .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("lengocsiliem_2122110324.Model.Product", "Product")
-                        .WithMany("OrderDetails")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("lengocsiliem_2122110324.Model.Cart", b =>
+                {
+                    b.HasOne("lengocsiliem_2122110324.Model.User", "User")
+                        .WithOne("Cart")
+                        .HasForeignKey("lengocsiliem_2122110324.Model.Cart", "UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("lengocsiliem_2122110324.Model.CartItem", b =>
+                {
+                    b.HasOne("lengocsiliem_2122110324.Model.Cart", "Cart")
+                        .WithMany("Items")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("lengocsiliem_2122110324.Model.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
 
                     b.Navigation("Product");
                 });
@@ -283,12 +361,12 @@ namespace lengocsiliem_2122110324.Migrations
 
             modelBuilder.Entity("Order", b =>
                 {
-                    b.Navigation("OrderDetails");
+                    b.Navigation("OrderItems");
                 });
 
-            modelBuilder.Entity("lengocsiliem_2122110324.Model.Product", b =>
+            modelBuilder.Entity("lengocsiliem_2122110324.Model.Cart", b =>
                 {
-                    b.Navigation("OrderDetails");
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("lengocsiliem_2122110324.Model.Role", b =>
@@ -298,6 +376,8 @@ namespace lengocsiliem_2122110324.Migrations
 
             modelBuilder.Entity("lengocsiliem_2122110324.Model.User", b =>
                 {
+                    b.Navigation("Cart");
+
                     b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618

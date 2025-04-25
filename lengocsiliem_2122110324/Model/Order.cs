@@ -7,21 +7,14 @@ public class Order
 {
     [Key]
     public int OrderId { get; set; }
-
+    public string Email { get; set; }
     public DateTime OrderDate { get; set; }
-
-    [JsonIgnore]
-    public User? User { get; set; } 
-    public int UserId { get; set; } 
+    public string Payment { get; set; }
     public decimal TotalAmount { get; set; }
-
-    public string Status { get; set; }
-
-    public string ShippingAddress { get; set; }
-
-    public string Payment{ get; set; }
-
+    public string OrderStatus { get; set; }
     public string? Note { get; set; }
+    public List<OrderDetail> OrderItems { get; set; }
+
 
     public DateTime CreatedAt { get; set; }
 

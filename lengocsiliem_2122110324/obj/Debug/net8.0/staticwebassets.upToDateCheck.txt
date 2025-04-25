@@ -1,3 +1,8 @@
+wwwroot\images\15.jpg
+wwwroot\images\24.jpg
+wwwroot\images\600_iphone_se_2020_trang_taozin_1.jpg
+wwwroot\images\9.jpg
 wwwroot\images\iphone-16-pro-max.webp
+wwwroot\images\maytinh2.jpg
 wwwroot\images\product01.png
 wwwroot\images\product02.jpg
